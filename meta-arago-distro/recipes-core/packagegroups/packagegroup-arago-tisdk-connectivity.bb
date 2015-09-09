@@ -41,9 +41,7 @@ DEMO_APPS = "\
 "
 
 BLUETOOTH_STACK = "\
-    bluez4 \
-    bluez4-agent \
-    bluez-hcidump \
+    ${VIRTUAL-RUNTIME_bluetooth-stack} \
     uim \
 "
 
