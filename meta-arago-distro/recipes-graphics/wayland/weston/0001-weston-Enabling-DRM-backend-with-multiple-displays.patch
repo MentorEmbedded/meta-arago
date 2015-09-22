@@ -22,15 +22,6 @@ diff --git a/src/compositor-drm.c b/src/compositor-drm.c
 index e4496e7..3b22aa3 100644
 --- a/src/compositor-drm.c
 +++ b/src/compositor-drm.c
-@@ -646,7 +646,7 @@ drm_output_repaint(struct weston_output *output_base,
- 			.request.sequence = 1,
- 		};
- 
--		if ((!s->current && !s->next) ||
-+		if ((!s->current && !s->next) &&
- 		    !drm_sprite_crtc_supported(output_base, s->possible_crtcs))
- 			continue;
- 
 @@ -757,6 +757,7 @@ page_flip_handler(int fd, unsigned int frame,
  {
  	struct drm_output *output = (struct drm_output *) data;
