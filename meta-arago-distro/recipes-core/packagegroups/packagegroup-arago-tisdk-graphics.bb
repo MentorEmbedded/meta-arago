@@ -2,9 +2,9 @@ DESCRIPTION = "Task to install graphics binaries"
 LICENSE = "MIT"
 PR = "r8"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 GRAPHICS_WESTON = "\
     weston \

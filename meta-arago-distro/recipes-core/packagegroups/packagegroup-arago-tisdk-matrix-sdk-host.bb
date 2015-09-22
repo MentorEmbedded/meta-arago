@@ -2,9 +2,9 @@ DESCRIPTION = "Task to install Matrix v2 and associated applications sources in 
 LICENSE = "MIT"
 PR = "r4"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 MATRIX_GUI = " \
     matrix-gui-browser-src \
