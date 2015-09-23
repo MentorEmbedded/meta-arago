@@ -2,9 +2,9 @@ DESCRIPTION = "Task to add Qt embedded related sources into the sdk"
 LICENSE = "MIT"
 PR = "r6"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 QT4_DEMOS = "\
     ${@base_conditional('ARAGO_QT_PROVIDER', 'qt4-embedded-gles', 'quick-playground-src', '', d)} \

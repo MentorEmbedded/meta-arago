@@ -2,9 +2,9 @@ DESCRIPTION = "Task to install crypto sources in SDK"
 LICENSE = "MIT"
 PR = "r6"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 CRYPTO_RDEPENDS = ""
 

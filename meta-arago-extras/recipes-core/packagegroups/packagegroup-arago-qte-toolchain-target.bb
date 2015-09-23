@@ -3,9 +3,9 @@ LICENSE = "MIT"
 
 PR = "r8"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 QT4_SGX_SUPPORT = "\
         libqt-embeddedopengl4-dev \

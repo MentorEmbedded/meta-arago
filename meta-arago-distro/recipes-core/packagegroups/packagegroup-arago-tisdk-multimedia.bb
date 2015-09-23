@@ -2,9 +2,9 @@ DESCRIPTION = "Task to add multimedia related packages"
 LICENSE = "MIT"
 PR = "r13"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 MULTIMEDIA = ""
 

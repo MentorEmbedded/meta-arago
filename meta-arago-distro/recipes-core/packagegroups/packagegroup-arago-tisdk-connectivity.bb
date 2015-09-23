@@ -2,9 +2,9 @@ DESCRIPTION = "Task to install wireless packages into the target FS"
 LICENSE = "MIT"
 PR = "r32"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 # WLAN support packages.
 # These are the packages that all platforms use for WLAN support

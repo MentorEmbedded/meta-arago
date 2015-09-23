@@ -2,9 +2,9 @@ DESCRIPTION = "Task to install crypto dev packages in SDK"
 LICENSE = "MIT"
 PR = "r4"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 CRYPTO_API = ""
 CRYPTO_API_ti33x = "cryptodev-module-dev"

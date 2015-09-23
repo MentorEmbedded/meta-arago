@@ -2,9 +2,9 @@ DESCRIPTION = "Task to install graphics sources in SDK"
 LICENSE = "MIT"
 PR = "r0"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 GRAPHICS_RDEPENDS = ""
 

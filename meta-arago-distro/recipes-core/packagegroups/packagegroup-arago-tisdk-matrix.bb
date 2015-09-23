@@ -2,9 +2,9 @@ DESCRIPTION = "Task to include Matrix v2"
 LICENSE = "MIT"
 PR = "r42"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 MATRIX_ESSENTIALS = "        \
     matrix-gui               \

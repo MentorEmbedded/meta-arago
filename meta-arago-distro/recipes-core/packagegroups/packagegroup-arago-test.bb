@@ -2,9 +2,9 @@ DESCRIPTION = "Extended task to get System Test specific apps"
 LICENSE = "MIT"
 PR = "r29"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+inherit packagegroup
 
 ARAGO_TEST = "\
     bonnie++ \
