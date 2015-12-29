@@ -14,7 +14,3 @@ do_compile () {
     unset CPPFLAGS
     oe_runmake -C src
 }
-
-do_install_append() {
-    mv ${D}${prefix}/man ${D}${mandir}
-}
