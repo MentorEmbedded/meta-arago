@@ -2,10 +2,10 @@ DESCRIPTION = "Package containing scripts to setup the development host and targ
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://setup.sh;beginline=3;endline=31;md5=fc4b04a33df6d892c9f4d4a9d92b945e"
 
-PR = "r43"
+PR = "r46"
 
 BRANCH ?= "master"
-SRCREV = "ebfc94b347bc74ad9590cfbb5588900e31d6bc0e"
+SRCREV = "42a8379fda829f34c374ddfca0242a479a84d454"
 SRC_URI = "git://arago-project.org/git/projects/tisdk-setup-scripts.git;protocol=git;branch=${BRANCH}"
 
 S = "${WORKDIR}/git/"
@@ -51,9 +51,15 @@ do_install () {
 
     install -m 0755 ${S}/${UBOOT_ENV} ${D}/bin/setup-uboot-env.sh
 
-    sed -i -e "s|__MKUBIFS_ARGS__|${MKUBIFS_ARGS}|" \
-           -e "s|__UBINIZE_ARGS__|${UBINIZE_ARGS}|" \
-              "${D}/bin/create-ubifs.sh"
+    if [ -z "${MKUBIFS_ARGS}" -o -z "${UBINIZE_ARGS}" ]
+    then
+        # UBIFS not supported
+        rm "${D}/bin/create-ubifs.sh"
+    else
+        sed -i -e "s|__MKUBIFS_ARGS__|${MKUBIFS_ARGS}|" \
+               -e "s|__UBINIZE_ARGS__|${UBINIZE_ARGS}|" \
+                  "${D}/bin/create-ubifs.sh"
+    fi
 }
 
 FILES_${PN} += "setup.sh"
