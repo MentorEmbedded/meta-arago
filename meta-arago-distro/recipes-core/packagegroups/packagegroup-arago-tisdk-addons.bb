@@ -71,7 +71,6 @@ UTILS_append_omap-a15 = " mmc-utils \
 
 UTILS_append_k3 = " mmc-utils \
                     can-utils \
-                    parted \
                     switch-config \
                     irqbalance \
                     jailhouse \
